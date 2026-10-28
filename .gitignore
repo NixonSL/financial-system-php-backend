@@ -1,0 +1,33 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+logs/
+
+# Configurações locais
+.env
+.env.local
+.env.*.local
+
+# Dependências (se usar Composer depois)
+/vendor/
+composer.lock
+composer.phar
+
+# Sistemas operacionais
+.DS_Store
+Thumbs.db
+# npm
+node_modules/
+dist/

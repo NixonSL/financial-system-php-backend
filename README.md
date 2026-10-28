@@ -35,6 +35,7 @@ backend-php/
 │   └── database/
 │       └── connection.php  # Classe de conexão com MySQL
 ├── README.md               # Este arquivo
+├── SECURITY.md            # Análise de segurança
 └── .gitignore              # Arquivos ignorados pelo Git
 ```
 
@@ -99,6 +100,14 @@ $password = ''; // Senha vazia no XAMPP
 
 ## 🔐 Segurança
 
+### Status de Segurança
+- ✅ **SQL Injection**: Protegido com prepared statements
+- ⚠️ **IDOR**: Não aplicável (scripts de linha de comando)
+- ⚠️ **Validação de Dados**: Em desenvolvimento
+- ⚠️ **Autenticação**: A ser implementado (para API REST)
+
+**Para análise detalhada, veja [SECURITY.md](SECURITY.md)**
+
 ### Prepared Statements
 Todos os comandos SQL usam prepared statements para prevenir SQL injection:
 
@@ -109,10 +118,13 @@ $stmt->bindParam(2, $email);
 $stmt->execute();
 ```
 
-### Validação de Dados
-- Validação de tipos no banco de dados
-- Validação de CPF/CNPJ (a ser implementado)
-- Validação de email e telefone
+### Melhorias Planejadas
+- [ ] Validação de CPF/CNPJ
+- [ ] Verificação de duplicatas
+- [ ] Sanitização de dados
+- [ ] Logging de ações
+- [ ] Soft delete
+- [ ] Autenticação/autorização (API REST)
 
 ## 📝 Exemplos de Uso
 
